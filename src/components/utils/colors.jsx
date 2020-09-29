@@ -9,7 +9,7 @@ export const white = {
 export const blue = {
 	100: '#0574FF',
 	200: '#E2EEFF',
-	300: '#42729B',
+	300: '#255BB1',
 };
 
 export const grey = {

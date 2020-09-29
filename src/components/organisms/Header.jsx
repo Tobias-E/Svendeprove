@@ -48,8 +48,8 @@ const Container = styled.header`
 	padding: 1rem;
 	align-items: center;
 	position: relative;
-
 	@media screen and (min-width: 1023px) {
+		padding: 1rem 15vw;
 	}
 `;
 
@@ -60,13 +60,19 @@ const LogoContainer = styled.div`
 `;
 
 const Logo = styled.img`
-	max-width: 70px;
+	max-width: 50px;
+	@media screen and (min-width: 1023px) {
+		max-width: 70px;
+	}
 `;
 
 const Heading = styled.h1`
 	padding-left: 1rem;
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: 500;
+	@media screen and (min-width: 1023px) {
+		font-size: 1.7rem;
+	}
 `;
 
 const Nav = styled.nav`
@@ -74,7 +80,7 @@ const Nav = styled.nav`
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-around;
-	background-color: ${theme.primaryColor};
+	background-color: ${theme.secondaryColor};
 	transition: all 0.2s linear;
 	position: absolute;
 	z-index: 100;
@@ -84,10 +90,11 @@ const Nav = styled.nav`
 
 	@media screen and (max-width: 1022px) {
 		height: 300px;
+		border-radius: 10px 0 0 10px;
 	}
 
 	@media screen and (min-width: 1023px) {
-		width: 35vw;
+		width: 25rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;

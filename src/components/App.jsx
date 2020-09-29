@@ -5,6 +5,7 @@ import { RecoilRoot } from 'recoil';
 // Imported Components
 import { GlobalStyle } from './utils';
 import Header from './organisms/Header';
+import Footer from './organisms/Footer';
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<GlobalStyle />
 			<RecoilRoot>
 				<Header />
+				<Footer />
 			</RecoilRoot>
 		</div>
 	);
