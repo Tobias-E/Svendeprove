@@ -1,19 +1,117 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useRecoilState } from 'recoil';
+import { openState } from '../Recoil';
 
-// Imported components
+// Assets
+import logo from '../../assets/logo.png';
 import { theme } from '../utils';
 
+// Imported Components
+import Burger from '../atoms/Burger';
+
+// Exported Component
 const Header = () => {
+	const [open, setOpen] = useRecoilState(openState);
 	return (
-		<HeaderStyled>
-			<h2>Header</h2>
-		</HeaderStyled>
+		<Container>
+			<LogoContainer>
+				<Logo src={logo} alt='logo' />
+				<Heading>Foreningen for Dyrevelfærd</Heading>
+			</LogoContainer>
+			<Nav open={open}>
+				<Link href='/' onClick={() => setOpen(false)}>
+					Hjem
+				</Link>
+				<Link href='/page2' onClick={() => setOpen(false)}>
+					Om os
+				</Link>
+				<Link href='/page3' onClick={() => setOpen(false)}>
+					Bliv Frivillig
+				</Link>
+				<Link href='/page4' onClick={() => setOpen(false)}>
+					Dyr i nød?
+				</Link>
+				<Link href='/page5' onClick={() => setOpen(false)}>
+					Adopter et dyr
+				</Link>
+			</Nav>
+			<Burger />
+		</Container>
 	);
 };
 
-const HeaderStyled = styled.header`
-	background-color: ${theme.secondaryColor};
+// Styling
+const Container = styled.header`
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	align-items: center;
+	position: relative;
+
+	@media screen and (min-width: 1023px) {
+	}
+`;
+
+const LogoContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+`;
+
+const Logo = styled.img`
+	max-width: 70px;
+`;
+
+const Heading = styled.h1`
+	padding-left: 1rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+`;
+
+const Nav = styled.nav`
+	display: ${({ open }) => (open ? 'flex' : 'none')};
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	background-color: ${theme.primaryColor};
+	transition: all 0.2s linear;
+	position: absolute;
+	z-index: 100;
+	top: 100px;
+	right: 0;
+	opacity: ${({ open }) => (open ? '1' : '0')};
+
+	@media screen and (max-width: 1022px) {
+		height: 300px;
+	}
+
+	@media screen and (min-width: 1023px) {
+		width: 35vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		position: static;
+		background-color: transparent;
+		opacity: 1;
+	}
+`;
+
+const Link = styled.a`
+	text-decoration: none;
+	color: ${theme.linkColor};
+
+	:hover {
+		color: ${theme.black};
+		cursor: pointer;
+	}
+	:focus {
+		color: ${theme.black};
+	}
+
+	@media screen and (max-width: 1022px) {
+		padding: 0 3rem;
+	}
 `;
 
 export default Header;

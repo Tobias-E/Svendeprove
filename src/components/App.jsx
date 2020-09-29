@@ -1,35 +1,23 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import { RecoilRoot } from 'recoil';
+// import styled, { keyframes } from 'styled-components';
 
 // Imported Components
 import { GlobalStyle } from './utils';
-import logo from '../assets/logo.svg';
+import Header from './organisms/Header';
 
 function App() {
 	return (
 		<div className='App'>
 			<GlobalStyle />
-			<Header className='App-header'>
-				<Rotate>
-					<Logo src={logo} className='App-logo' alt='logo' />
-				</Rotate>
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<Link
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Learn React
-				</Link>
-			</Header>
+			<RecoilRoot>
+				<Header />
+			</RecoilRoot>
 		</div>
 	);
 }
 
-const Header = styled.header`
+/* const Header = styled.header`
 	background-color: #282c34;
 	min-height: 100vh;
 	display: flex;
@@ -61,6 +49,6 @@ const rotate = keyframes`
 
 const Rotate = styled.div`
 	animation: ${rotate} infinite 20s linear;
-`;
+`; */
 
 export default App;

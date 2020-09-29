@@ -7,5 +7,12 @@ export const white = {
 };
 
 export const blue = {
-	100: '#4CA9DF',
+	100: '#0574FF',
+	200: '#E2EEFF',
+	300: '#42729B',
+};
+
+export const grey = {
+	100: '#F7F7F7',
+	200: '#8A8B8D',
 };
