@@ -23,9 +23,13 @@ const Footer = () => {
 				<PartnerContainer>
 					<Heading>Partnere</Heading>
 					<A href='https://anima.dk/'>Anima</A>
-					<A href='/'>World Animal Protection</A>
-					<A href='/'>Fødevarestyrelsen</A>
-					<A href='/'>Faktalink</A>
+					<A href='https://www.worldanimalprotection.dk/'>
+						World Animal Protection
+					</A>
+					<A href='https://www.foedevarestyrelsen.dk/Sider/forside.aspx'>
+						Fødevarestyrelsen
+					</A>
+					<A href='https://faktalink.dk/'>Faktalink</A>
 				</PartnerContainer>
 			</Container>
 			<CopyRight> &copy; 2020 - Foreningen for Dyrevelfærd</CopyRight>
