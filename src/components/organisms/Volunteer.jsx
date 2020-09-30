@@ -13,7 +13,7 @@ const Volunteer = () => {
 	const data = useRecoilValue(volunteerData);
 	console.log(data);
 	return (
-		<Wrapper>
+		<Wrapper id='blivfrivillig'>
 			<Heading>Bliv Frivillig</Heading>
 			<Container>
 				{data.map((e) => (
