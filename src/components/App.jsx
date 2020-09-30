@@ -13,6 +13,7 @@ import Banner from './molecules/Banner';
 import About from './organisms/About';
 import Volunteer from './organisms/Volunteer';
 import Newsletter from './organisms/Newsletter';
+import Animal from './organisms/Animal';
 
 // Exported Component
 function App() {
@@ -21,6 +22,7 @@ function App() {
 		<Wrapper className='App'>
 			<GlobalStyle />
 			<Header />
+			<Animal />
 			<Banner
 				id={'hjem'}
 				img={bannerData[0].asset.url}

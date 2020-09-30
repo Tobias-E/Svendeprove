@@ -11,13 +11,12 @@ import { theme } from '../utils';
 // Exported Component
 const Volunteer = () => {
 	const data = useRecoilValue(volunteerData);
-	console.log(data);
 	return (
 		<Wrapper id='blivfrivillig'>
 			<Heading>Bliv Frivillig</Heading>
 			<Container>
 				{data.map((e) => (
-					<ContentContainer>
+					<ContentContainer key={e.id}>
 						<ContentHeading>{e.title}</ContentHeading>
 						<Content>
 							<Image src={e.asset.url} alt={e.title} />

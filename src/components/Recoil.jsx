@@ -29,12 +29,23 @@ export const aboutData = selector({
 	},
 });
 
-// Fetch volunteer
+// Fetch Volunteers
 const volunteer = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/volunteers';
 export const volunteerData = selector({
 	key: 'volunteerData',
 	get: async () => {
 		const response = await fetch(volunteer);
+		const result = await response.json();
+		return result;
+	},
+});
+
+// Fetch Animals
+const animal = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/animals';
+export const animalData = selector({
+	key: 'animalData',
+	get: async () => {
+		const response = await fetch(animal);
 		const result = await response.json();
 		return result;
 	},

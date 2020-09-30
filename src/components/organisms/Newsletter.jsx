@@ -87,11 +87,6 @@ const Form = styled.form`
 	}
 `;
 
-/* const InputContainer = styled.div`
-	display: flex;
-	flex-direction: row;
-`; */
-
 const Input = styled.input`
 	border-radius: 5px;
 	border: 1px solid ${theme.cardBorder};
