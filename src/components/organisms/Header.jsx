@@ -20,19 +20,19 @@ const Header = () => {
 				<Heading>Foreningen for Dyrevelfærd</Heading>
 			</LogoContainer>
 			<Nav open={open}>
-				<Link href='/' onClick={() => setOpen(false)}>
+				<Link href='#hjem' onClick={() => setOpen(false)}>
 					Hjem
 				</Link>
-				<Link href='/page2' onClick={() => setOpen(false)}>
+				<Link href='#omos' onClick={() => setOpen(false)}>
 					Om os
 				</Link>
-				<Link href='/page3' onClick={() => setOpen(false)}>
+				<Link href='#blivfrivillig' onClick={() => setOpen(false)}>
 					Bliv Frivillig
 				</Link>
-				<Link href='/page4' onClick={() => setOpen(false)}>
+				<Link href='#dyrinod' onClick={() => setOpen(false)}>
 					Dyr i nød?
 				</Link>
-				<Link href='/page5' onClick={() => setOpen(false)}>
+				<Link href='#adopteretdyr' onClick={() => setOpen(false)}>
 					Adopter et dyr
 				</Link>
 			</Nav>
@@ -47,7 +47,9 @@ const Container = styled.header`
 	justify-content: space-between;
 	padding: 1rem;
 	align-items: center;
-	position: relative;
+	position: sticky;
+	top: 0px;
+	background-color: ${theme.white};
 	@media screen and (min-width: 1023px) {
 		padding: 1rem 15vw;
 	}
@@ -66,7 +68,7 @@ const Logo = styled.img`
 	}
 `;
 
-const Heading = styled.h1`
+const Heading = styled.h2`
 	padding-left: 1rem;
 	font-size: 1.4rem;
 	font-weight: 500;

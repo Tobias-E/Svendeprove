@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import { RecoilRoot } from 'recoil';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<RecoilRoot>
+			<React.Suspense fallback={<h2>Loading...</h2>}>
+				<App />
+			</React.Suspense>
+		</RecoilRoot>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

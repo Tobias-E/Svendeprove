@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Imported components
+// Imported Components
 import { theme } from '../utils';
 
+// Exported Component
 const Footer = () => {
 	return (
 		<FooterS>
@@ -46,8 +47,12 @@ const FooterS = styled.footer`
 
 const Container = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
+
+	@media screen and (min-width: 1023px) {
+		flex-direction: row;
+	}
 `;
 
 const PartnerContainer = styled.div`

@@ -1,23 +1,55 @@
 import React from 'react';
-import { RecoilRoot } from 'recoil';
-// import styled, { keyframes } from 'styled-components';
+import styled /* , { keyframes }  */ from 'styled-components';
+import { useRecoilValue } from 'recoil';
+import { sectionsData } from './Recoil';
+
+// Assets
+// import kittens from '../assets/header/kittens.jpg';
 
 // Imported Components
 import { GlobalStyle } from './utils';
 import Header from './organisms/Header';
 import Footer from './organisms/Footer';
+import Banner from './molecules/Banner';
+import About from './organisms/About';
 
+// import Emergency from './organisms/Emergency';
+
+// Exported Component
 function App() {
+	const bannerData = useRecoilValue(sectionsData);
+	/* console.log(bannerData); */
 	return (
-		<div className='App'>
+		<Wrapper className='App'>
 			<GlobalStyle />
-			<RecoilRoot>
-				<Header />
-				<Footer />
-			</RecoilRoot>
-		</div>
+			<Header />
+			<Banner
+				id='hjem'
+				img={bannerData[0].asset.url}
+				heading={bannerData[0].title}
+				paragraph={bannerData[0].content}
+			/>
+			<About id='omos' />
+			<Banner
+				id='dyrinod'
+				img={bannerData[1].asset.url}
+				heading={bannerData[1].title}
+				paragraph={bannerData[1].content}
+			/>
+			<Banner
+				id='adopteretdyr'
+				img={bannerData[2].asset.url}
+				heading={bannerData[2].title}
+				paragraph={bannerData[2].content}
+			/>
+			<Footer />
+		</Wrapper>
 	);
 }
+
+const Wrapper = styled.div`
+	position: relative;
+`;
 
 /* const Header = styled.header`
 	background-color: #282c34;
