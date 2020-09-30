@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import { theme } from '../utils';
 
 // Exported Component
-const Banner = ({ img, heading, paragraph }) => {
+const Banner = ({ id, img, heading, paragraph }) => {
 	return (
-		<Background id='hjem' style={{ backgroundImage: `url(${img})` }}>
+		<Background id={id} style={{ backgroundImage: `url(${img})` }}>
 			<Container>
 				<H1>{heading}</H1>
 				<P>{paragraph}</P>

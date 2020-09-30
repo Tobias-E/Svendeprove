@@ -43,6 +43,7 @@ const Header = () => {
 
 // Styling
 const Container = styled.header`
+	height: 120px;
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem;

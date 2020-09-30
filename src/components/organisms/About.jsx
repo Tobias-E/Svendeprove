@@ -6,13 +6,11 @@ import { aboutData } from '../Recoil';
 // Assets
 import { theme } from '../utils';
 
-// Imported Components
-
 // Exported Component
 const About = () => {
 	const data = useRecoilValue(aboutData);
 	return (
-		<Container>
+		<Container id='omos'>
 			{data.map((e) => (
 				<Content key={e.id}>
 					<Heading key={e.title}>{e.title}</Heading>

@@ -4,7 +4,6 @@ import { useRecoilValue } from 'recoil';
 import { sectionsData } from './Recoil';
 
 // Assets
-// import kittens from '../assets/header/kittens.jpg';
 
 // Imported Components
 import { GlobalStyle } from './utils';
@@ -13,12 +12,9 @@ import Footer from './organisms/Footer';
 import Banner from './molecules/Banner';
 import About from './organisms/About';
 
-// import Emergency from './organisms/Emergency';
-
 // Exported Component
 function App() {
 	const bannerData = useRecoilValue(sectionsData);
-	/* console.log(bannerData); */
 	return (
 		<Wrapper className='App'>
 			<GlobalStyle />
@@ -29,9 +25,9 @@ function App() {
 				heading={bannerData[0].title}
 				paragraph={bannerData[0].content}
 			/>
-			<About id='omos' />
+			<About />
 			<Banner
-				id='dyrinod'
+				id={'dyrinod'}
 				img={bannerData[1].asset.url}
 				heading={bannerData[1].title}
 				paragraph={bannerData[1].content}

@@ -6,6 +6,18 @@ export const openState = atom({
 	default: false,
 });
 
+// Fetch Sections (Banner)
+const sections =
+	'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/adoptsections';
+export const sectionsData = selector({
+	key: 'sectionsData',
+	get: async () => {
+		const response = await fetch(sections);
+		const result = await response.json();
+		return result;
+	},
+});
+
 // Fetch About
 const about = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/abouts';
 export const aboutData = selector({
@@ -17,13 +29,12 @@ export const aboutData = selector({
 	},
 });
 
-// Fetch Sections (Banner)
-const sections =
-	'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/adoptsections';
-export const sectionsData = selector({
-	key: 'sectionsData',
+// Fetch volunteer
+const volunteer = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/volunteers';
+export const volunteerDate = selector({
+	key: 'volunteerData',
 	get: async () => {
-		const response = await fetch(sections);
+		const response = await fetch(volunteer);
 		const result = await response.json();
 		return result;
 	},
