@@ -31,7 +31,7 @@ export const aboutData = selector({
 
 // Fetch volunteer
 const volunteer = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/volunteers';
-export const volunteerDate = selector({
+export const volunteerData = selector({
 	key: 'volunteerData',
 	get: async () => {
 		const response = await fetch(volunteer);

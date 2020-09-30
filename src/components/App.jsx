@@ -11,6 +11,7 @@ import Header from './organisms/Header';
 import Footer from './organisms/Footer';
 import Banner from './molecules/Banner';
 import About from './organisms/About';
+import Volunteer from './organisms/Volunteer';
 
 // Exported Component
 function App() {
@@ -19,6 +20,7 @@ function App() {
 		<Wrapper className='App'>
 			<GlobalStyle />
 			<Header />
+			<Volunteer />
 			<Banner
 				id='hjem'
 				img={bannerData[0].asset.url}
@@ -27,7 +29,7 @@ function App() {
 			/>
 			<About />
 			<Banner
-				id={'dyrinod'}
+				id='dyrinod'
 				img={bannerData[1].asset.url}
 				heading={bannerData[1].title}
 				paragraph={bannerData[1].content}

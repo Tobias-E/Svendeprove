@@ -36,7 +36,7 @@ const Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	@media screen and (min-width: 1023px) {
-		max-width: 20vw;
+		max-width: 22vw;
 	}
 `;
 

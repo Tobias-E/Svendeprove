@@ -9,6 +9,8 @@ export const theme = {
 	black: black[100],
 	headingColor: blue[300],
 	buttonColor: blue[100],
-	linkColor: grey[200],
+	cardHeadingBackground: grey[100],
+	cardBorder: grey[200],
+	linkColor: grey[300],
 	primaryFont,
 };

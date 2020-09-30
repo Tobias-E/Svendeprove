@@ -14,5 +14,6 @@ export const blue = {
 
 export const grey = {
 	100: '#F7F7F7',
-	200: '#8A8B8D',
+	200: '#d3d3d3',
+	300: '#8A8B8D',
 };
