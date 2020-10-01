@@ -20,19 +20,19 @@ const Header = () => {
 				<Heading>Foreningen for Dyrevelfærd</Heading>
 			</LogoContainer>
 			<Nav open={open}>
-				<Link href='#hjem' onClick={() => setOpen(false)}>
+				<Link href='/#hjem' onClick={() => setOpen(false)}>
 					Hjem
 				</Link>
-				<Link href='#omos' onClick={() => setOpen(false)}>
+				<Link href='/#omos' onClick={() => setOpen(false)}>
 					Om os
 				</Link>
-				<Link href='#blivfrivillig' onClick={() => setOpen(false)}>
+				<Link href='/#blivfrivillig' onClick={() => setOpen(false)}>
 					Bliv Frivillig
 				</Link>
-				<Link href='#dyrinod' onClick={() => setOpen(false)}>
+				<Link href='/#dyrinod' onClick={() => setOpen(false)}>
 					Dyr i nød?
 				</Link>
-				<Link href='#adopteretdyr' onClick={() => setOpen(false)}>
+				<Link href='/#adopteretdyr' onClick={() => setOpen(false)}>
 					Adopter et dyr
 				</Link>
 			</Nav>
