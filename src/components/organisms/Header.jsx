@@ -49,6 +49,7 @@ const Container = styled.header`
 	padding: 1rem;
 	align-items: center;
 	position: sticky;
+	z-index: 100;
 	top: 0px;
 	background-color: ${theme.white};
 	@media screen and (min-width: 1023px) {

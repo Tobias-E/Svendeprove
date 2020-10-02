@@ -7,6 +7,14 @@ import { animalData } from '../Recoil';
 // Assets
 import { theme } from '../utils';
 
+function calcDate(e) {
+	let today = new Date();
+	let longTimeAgo = new Date(e);
+	let difference = today - longTimeAgo;
+	let differenceInDays = Math.floor(difference / (1000 * 3600 * 24));
+	return differenceInDays;
+}
+
 // Exported Component
 const Animals = () => {
 	const [count, setCount] = useState(8);
@@ -23,7 +31,10 @@ const Animals = () => {
 						<TextContainer>
 							<ContentHeading>{e.name}</ContentHeading>
 							<P>{e.description}</P>
-							<Span>Været på internatet i 136 dage.</Span>
+							<Span>
+								Været på internatet i{' '}
+								{calcDate(e.asset.createdAt)} dage.
+							</Span>
 						</TextContainer>
 					</Figure>
 				))}
