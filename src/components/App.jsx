@@ -16,7 +16,7 @@ import Slider from './molecules/Slider';
 import Volunteer from './organisms/Volunteer';
 import Newsletter from './organisms/Newsletter';
 import Animals from './organisms/Animals';
-import Animal from './organisms/Animal';
+import Animal from './templates/Animal';
 
 // Exported Component
 function App() {
