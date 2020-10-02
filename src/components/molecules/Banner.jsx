@@ -41,6 +41,7 @@ const H1 = styled.h1`
 
 const P = styled.p`
 	color: ${theme.white};
+	max-width: 550px;
 `;
 
 export default Banner;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled /* , { keyframes }  */ from 'styled-components';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { sectionsData } from './Recoil';
 
@@ -12,6 +12,7 @@ import Header from './organisms/Header';
 import Footer from './organisms/Footer';
 import Banner from './molecules/Banner';
 import About from './organisms/About';
+import Slider from './molecules/Slider';
 import Volunteer from './organisms/Volunteer';
 import Newsletter from './organisms/Newsletter';
 import Animals from './organisms/Animals';
@@ -27,7 +28,6 @@ function App() {
 				<Header />
 				<Switch>
 					<Route exact path='/'>
-						<Animals />
 						<Banner
 							id={'hjem'}
 							img={bannerData[0].asset.url}
@@ -35,6 +35,7 @@ function App() {
 							paragraph={bannerData[0].content}
 						/>
 						<About />
+						<Slider />
 						<Volunteer />
 						<Banner
 							id={'dyrinod'}
@@ -49,6 +50,7 @@ function App() {
 							heading={bannerData[2].title}
 							paragraph={bannerData[2].content}
 						/>
+						<Animals />
 					</Route>
 					<Route path='/animal/:id' children={<Animal />} />
 				</Switch>

@@ -50,3 +50,9 @@ export const animalData = selector({
 		return result;
 	},
 });
+
+// Newsletter modal
+export const modalIsOpen = atom({
+	key: 'modalIsOpen',
+	default: false,
+});

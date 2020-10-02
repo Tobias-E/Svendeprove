@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
@@ -9,24 +9,34 @@ import { theme } from '../utils';
 
 // Exported Component
 const Animals = () => {
+	const [count, setCount] = useState(8);
 	const data = useRecoilValue(animalData);
-	console.log(data);
+	let show = data.slice(0, count);
 	return (
 		<Container>
 			<Heading>Dyr hos os</Heading>
 			<SubHeading>{data.length} dyr</SubHeading>
 			<ContentContainer>
-				{data.map((e) => (
+				{show.map((e) => (
 					<Figure to={`/animal/${e.id}`} key={e.id}>
 						<Img src={e.asset.url} alt='' />
 						<TextContainer>
 							<ContentHeading>{e.name}</ContentHeading>
 							<P>{e.description}</P>
-							<Span>Været på internatet i 32 dage.</Span>
+							<Span>Været på internatet i 136 dage.</Span>
 						</TextContainer>
 					</Figure>
 				))}
 			</ContentContainer>
+			<Button
+				onClick={() => {
+					count < data.length
+						? setCount(count + 2)
+						: setCount(count - 2);
+				}}
+			>
+				{count < data.length ? 'Show more' : 'Show less'}
+			</Button>
 		</Container>
 	);
 };
@@ -103,6 +113,18 @@ const P = styled.p`
 const Span = styled.span`
 	color: ${theme.linkColor};
 	font-size: 0.8rem;
+`;
+
+const Button = styled.button`
+	align-self: center;
+	justify-self: center;
+	max-width: 120px;
+	padding: 0.5rem 1rem;
+	background-color: ${theme.buttonColor};
+	color: ${theme.white};
+	border-radius: 5px;
+	border-style: none;
+	outline: none;
 `;
 
 export default Animals;
