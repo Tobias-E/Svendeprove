@@ -30,7 +30,10 @@ const Slider = () => {
 };
 
 const FlickityS = styled(Flickity)`
-	width: 100vw;
+	@media screen and (min-width: 1023px) {
+		margin: 0 15vw;
+		width: 70vw;
+	}
 	overflow: hidden;
 	position: relative;
 	:focus {
