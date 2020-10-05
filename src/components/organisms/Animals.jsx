@@ -7,6 +7,7 @@ import { animalData } from '../Recoil';
 // Assets
 import { theme } from '../utils';
 
+// Calculate days in internat
 function calcDate(e) {
 	let today = new Date();
 	let longTimeAgo = new Date(e);

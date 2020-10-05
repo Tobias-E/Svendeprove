@@ -28,7 +28,6 @@ const Newsletter = () => {
 	const { register, handleSubmit, errors } = useForm();
 	const [, setIsOpen] = useRecoilState(modalIsOpen);
 	const onSubmit = (data) => postData(data) & setIsOpen(true);
-	// eslint-ignore-next-line
 
 	return (
 		<Container>
@@ -68,13 +67,7 @@ const Newsletter = () => {
 						})}
 					/>
 					{errors.name && errors.name.message}
-					<Button
-						type='submit'
-						id='submit'
-						/* onClick={() => {
-							errors ? setIsOpen(false) : setIsOpen(true);
-						}} */
-					>
+					<Button type='submit' id='submit'>
 						Tilmeld
 					</Button>
 				</Form>

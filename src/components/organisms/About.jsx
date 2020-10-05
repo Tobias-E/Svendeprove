@@ -29,6 +29,7 @@ const Container = styled.section`
 	@media screen and (min-width: 1023px) {
 		flex-direction: row;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 `;
 

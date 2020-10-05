@@ -6,6 +6,7 @@ import { openState } from '../Recoil';
 // Assets
 import { theme } from '../utils';
 
+// Exported Component
 const Burger = () => {
 	const [open, setOpen] = useRecoilState(openState);
 	return (

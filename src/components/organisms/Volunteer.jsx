@@ -6,8 +6,6 @@ import { volunteerData } from '../Recoil';
 // Assets
 import { theme } from '../utils';
 
-// Imported Components
-
 // Exported Component
 const Volunteer = () => {
 	const data = useRecoilValue(volunteerData);

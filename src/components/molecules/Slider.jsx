@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { useRecoilValue } from 'recoil';
 import { animalData } from '../Recoil';
 import Flickity from 'react-flickity-component';
-// import { theme } from '../utils';
 
 const flickityOptions = {
 	initialindex: 3,
 };
 
+// Exported Component
 const Slider = () => {
 	const data = useRecoilValue(animalData);
 	return (
