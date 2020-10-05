@@ -1,6 +1,6 @@
 # Projektdokumentation
 
-#### Navn: Tobias Eskou WUHF02
+#### Navn: Tobias Eskou
 
 ##### Hold: WUHF02
 
@@ -9,7 +9,9 @@
 ##### Uddannelsessted: Roskilde tekniske skole
 
 [Link til site (localhost:3000)](http://localhost:3000/)
+
 [Link til admin login (localhost:2000/login)](http://localhost:2000/login)
+
 Brugernavn: admin
 password: 1234
 
