@@ -22,7 +22,7 @@ const Slider = () => {
 		>
 			{data.map((e) => (
 				<div key={e.id}>
-					<img src={e.asset.url} alt='animals' />
+					{e.asset && <img src={e.asset.url} alt='animals' />}
 				</div>
 			))}
 		</FlickityS>

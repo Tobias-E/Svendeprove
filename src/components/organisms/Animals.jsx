@@ -10,8 +10,8 @@ import { theme } from '../utils';
 // Calculate days in internat
 function calcDate(e) {
 	let today = new Date();
-	let longTimeAgo = new Date(e);
-	let difference = today - longTimeAgo;
+	let arrived = new Date(e);
+	let difference = today - arrived;
 	let differenceInDays = Math.floor(difference / (1000 * 3600 * 24));
 	return differenceInDays;
 }
@@ -28,14 +28,21 @@ const Animals = () => {
 			<ContentContainer>
 				{show.map((e) => (
 					<Figure to={`/animal/${e.id}`} key={e.id}>
-						<Img src={e.asset.url} alt='' />
+						{e.asset && (
+							<Img
+								src={e.asset.url ? e.asset.url : 'undefined'}
+								alt=''
+							/>
+						)}
 						<TextContainer>
 							<ContentHeading>{e.name}</ContentHeading>
 							<P>{e.description}</P>
-							<Span>
-								Været på internatet i{' '}
-								{calcDate(e.asset.createdAt)} dage.
-							</Span>
+							{e.asset && (
+								<Span>
+									Været på internatet i{' '}
+									{calcDate(e.asset.createdAt)} dage.
+								</Span>
+							)}
 						</TextContainer>
 					</Figure>
 				))}

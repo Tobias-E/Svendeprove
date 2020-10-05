@@ -7,8 +7,7 @@ export const openState = atom({
 });
 
 // Fetch Sections (Banner)
-const sections =
-	'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/adoptsections';
+const sections = 'http://localhost:4000/api/v1/adoptsections';
 export const sectionsData = selector({
 	key: 'sectionsData',
 	get: async () => {
@@ -19,7 +18,7 @@ export const sectionsData = selector({
 });
 
 // Fetch About
-const about = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/abouts';
+const about = 'http://localhost:4000/api/v1/abouts';
 export const aboutData = selector({
 	key: 'aboutData',
 	get: async () => {
@@ -30,7 +29,7 @@ export const aboutData = selector({
 });
 
 // Fetch Volunteers
-const volunteer = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/volunteers';
+const volunteer = 'http://localhost:4000/api/v1/volunteers';
 export const volunteerData = selector({
 	key: 'volunteerData',
 	get: async () => {
@@ -41,7 +40,7 @@ export const volunteerData = selector({
 });
 
 // Fetch Animals
-const animal = 'https://dyrevelfaerd-tobias.herokuapp.com/api/v1/animals';
+const animal = 'http://localhost:4000/api/v1/animals';
 export const animalData = selector({
 	key: 'animalData',
 	get: async () => {

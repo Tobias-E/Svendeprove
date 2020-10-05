@@ -17,7 +17,9 @@ const Volunteer = () => {
 					<ContentContainer key={e.id}>
 						<ContentHeading>{e.title}</ContentHeading>
 						<Content>
-							<Image src={e.asset.url} alt={e.title} />
+							{e.asset && (
+								<Image src={e.asset.url} alt={e.title} />
+							)}
 							<P>{e.content}</P>
 						</Content>
 						<Extra>{e.extra}</Extra>
