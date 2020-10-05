@@ -105,7 +105,7 @@ function calcDate(e) {
 ```
 
 `useState` anvender jeg til at kontrollere hvor mange dyr som bliver vist på sitet.
-`useState` fungerer på den måde at man definere en variabel og en function i arrayet. Som så bliver deklareret vha. useState, hvor man i paratesen definerer hvad variabelen skal være fra start af.
+`useState` fungerer på den måde at man definere en variabel og en function i arrayet. Som så bliver deklareret vha. useState, hvor man i parantesen definerer hvad variabelen skal være fra start af.
 Så hvis man laver en `console.log(count)` vil 8 blive udskrevet.
 Hvis jeg så kalder `setCount(count + 2)` og laver en `console.log(count)` vil 10 blive udskrevet.
 Dette er enorm nyttigt til f.eks. at tjekke op en menu er åben eller lukket vha. `true/false` state.
