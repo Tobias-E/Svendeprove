@@ -87,9 +87,9 @@ Hvilket gav mig et godt udgangspunkt for at færdiggøre sitet og har virket yde
 
 ### En beskrivelse af særlige punkter til bedømmelse
 
-> !
-
--   Supplerende kodeeksempler
+`calcDate` funktionen har jeg lavet for at kunne udregne hvor lang tid, det enkelte dyr har været på internatet.
+Her opretter jeg 2 variabler, `today` som kalder `new Date` og finder ud af tidspunktet nu, og `arrived` som tager imod et argument, for hvornår at dyret er blevet anbragt på internatet.
+Dette trækker jeg fra hinanden i variablen `difference`, hvor efter at jeg forkorter det ind til hele dage i variablen `differenceInDays`. Hvilket jeg så returnerer, som så kan indsættes hvor jeg skal bruge det.
 
 ```js
 function calcDate(e) {
@@ -99,6 +99,16 @@ function calcDate(e) {
 	let differenceInDays = Math.floor(difference / (1000 * 3600 * 24));
 	return differenceInDays;
 }
+```
+
+`useState` anvender jeg til at kontrollere hvor mange dyr som bliver vist på sitet.
+`useState` fungerer på den måde at man definere en variabel og en function i arrayet. Som så bliver deklareret vha. useState, hvor man i paratesen definerer hvad variabelen skal være fra start af.
+Så hvis man laver en `console.log(count)` vil 8 blive udskrevet.
+Hvis jeg så kalder `setCount(count + 2)` og laver en `console.log(count)` vil 10 blive udskrevet.
+Dette er enorm nyttigt til f.eks. at tjekke op en menu er åben eller lukket vha. `true/false` state.
+
+```jsx
+const [count, setCount] = useState(8);
 ```
 
 ---
