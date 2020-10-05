@@ -13,7 +13,8 @@
 [Link til admin login (localhost:2000/login)](http://localhost:2000/login)
 
 Brugernavn: admin
-password: 1234
+
+Password: 1234
 
 ## Teknologier
 
